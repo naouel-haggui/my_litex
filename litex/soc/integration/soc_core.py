@@ -28,6 +28,7 @@ from litex.soc.integration.soc import *
 
 from litex.compat.soc_core import *
 
+
 __all__ = [
     "mem_decoder",
     "get_mem_data",
