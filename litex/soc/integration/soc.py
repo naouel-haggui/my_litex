@@ -107,7 +107,7 @@ class SoCCSRRegion:
 
 class SoCBusHandler(LiteXModule):
     supported_standard      = ["wishbone", "axi-lite", "axi"]
-    supported_data_width    = [32, 64, 128, 256, 512]
+    supported_data_width    = [4, 8, 16, 32, 64, 128, 256, 512]
     supported_address_width = [32]
 
     # Creation -------------------------------------------------------------------------------------
@@ -648,7 +648,7 @@ class SoCLocHandler(LiteXModule):
 # SoCCSRHandler ------------------------------------------------------------------------------------
 
 class SoCCSRHandler(SoCLocHandler):
-    supported_data_width    = [8, 32]
+    supported_data_width    = [4, 8, 32]
     supported_address_width = [14+i for i in range(4)]
     supported_alignment     = [32]
     supported_paging        = [0x800*2**i for i in range(4)]
